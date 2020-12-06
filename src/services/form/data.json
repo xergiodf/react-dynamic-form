@@ -1,0 +1,187 @@
+{
+  "form": {
+    "id": 1,
+    "type": "WorkCompensation",
+    "sections": [
+      {
+        "id": 1,
+        "type": "Contact",
+        "order": 1,
+        "title": "Who is the primary contact for this policy",
+        "subtitle": "This person will receive all communications from Newfront about this policy.  You can change this contact information later.  If you're not sure, just add your contact information.",
+        "questions": [
+          {
+            "id": 1,
+            "type": "text",
+            "apiName": "fullName",
+            "label": "Full Name",
+            "order": 1,
+            "hint": "This is a required field",
+            "required": true
+          },
+          {
+            "id": 2,
+            "type": "text",
+            "apiName": "role",
+            "label": "Role",
+            "order": 2,
+            "required": false
+          },
+          {
+            "id": 3,
+            "type": "text",
+            "apiName": "phoneNumber",
+            "label": "Phone Number",
+            "order": 3,
+            "hint": "This is a required field",
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": "Company",
+        "order": 2,
+        "title": "Tell us about your company",
+        "questions": [
+          {
+            "id": 4,
+            "type": "text",
+            "apiName": "companyName",
+            "label": "Company Name",
+            "order": 1,
+            "hint": "This is a required field",
+            "required": true
+          },
+          {
+            "id": 5,
+            "type": "text",
+            "apiName": "fein",
+            "label": "What is your Federal Employer Identification Number? (FEIN)",
+            "order": 2,
+            "hint": "This is a required field",
+            "required": true
+          },
+          {
+            "id": 6,
+            "type": "number",
+            "apiName": "yearsInBusiness",
+            "label": "Years in Business",
+            "order": 3,
+            "required": false
+          },
+          {
+            "id": 7,
+            "type": "number",
+            "apiName": "numberofLocations",
+            "label": "Number of Locations",
+            "order": 4,
+            "required": false
+          },
+          {
+            "id": 8,
+            "type": "text",
+            "apiName": "operationStates",
+            "label": "In which states do you operate",
+            "order": 5,
+            "required": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": "Employees",
+        "order": 3,
+        "title": "Tell us about your employees",
+        "questions": [
+          {
+            "id": 9,
+            "type": "text",
+            "fieldId": "workInjury",
+            "label": "What is the name of the clinic, physician, or ER used for work injuries?",
+            "order": 1,
+            "hint": "This is a required field",
+            "required": true
+          },
+          {
+            "id": 10,
+            "type": "checkbox",
+            "apiName": "medicalInsurance",
+            "order": 2,
+            "options": [{ "key": "medicalInsurance", "value": "Does your group provide medical insurance?" }],
+            "required": false
+          },
+          {
+            "id": 11,
+            "type": "checkbox",
+            "apiName": "retirementPlan",
+            "order": 3,
+            "options": [{ "key": "retirementPlan", "value": "Do you offer a retirement or pension plan?" }],
+            "required": false
+          },
+          {
+            "id": 12,
+            "type": "checkbox",
+            "apiName": "paidVacation",
+            "order": 4,
+            "required": false,
+            "options": [{ "key": "paidVacation", "value": "Do you give paid vacation?" }]
+          },
+          {
+            "id": 13,
+            "type": "text",
+            "apiName": "paidVacationDetail",
+            "label": "Please provide details about the paid vacation",
+            "order": 5,
+            "hint": "This is a required field",
+            "depends": [
+              { "key": "field", "value": "paidVacation" },
+              { "key": "trigger", "value": "true" }
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "type": "Payment",
+        "order": 4,
+        "title": "How do you want to pay for your policy?",
+        "questions": [
+          {
+            "id": 14,
+            "type": "radio",
+            "order": 1,
+            "options": [
+              {
+                "key": "newfront",
+                "value": "I want to pay Newfront",
+                "options": [
+                  {
+                    "key": "description",
+                    "value": "You'll pay newfront instead of paying each insurance company separately.  There are no fees."
+                  },
+                  {
+                    "key": "badge",
+                    "value": "Recommended"
+                  }
+                ]
+              },
+              {
+                "key": "company",
+                "value": "I want to pay the insurance company directly",
+                "options": [
+                  {
+                    "key": "description",
+                    "value": "You'll receive bills from the insurance company and it will be your responsibility to make sure they are paid to keep your coverage."
+                  }
+                ]
+              }
+            ],
+            "required": true
+          }
+        ]
+      }
+    ]
+  }
+}
