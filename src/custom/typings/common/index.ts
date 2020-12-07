@@ -60,3 +60,14 @@ export type Form = {
 export type FormResponse = {
   form: Form;
 };
+
+export type FormState = {
+  responses: Array<UserResponses>;
+};
+
+type UserResponses = {
+  formId: number;
+  sectionId: number;
+  questionId: number;
+  value: string;
+};
