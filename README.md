@@ -2,9 +2,9 @@
 
 [DEMO](https://react-dynamic-form.xergiodf.vercel.app/)
 
-This is the implementation of a small portion of the [Project Plan](<Project-Plan-(Task-%231)>). The intention of this repository is to act as a Proof of Concept, tackling certain tasks from the [Milestones](<Project-Plan-(Task-%231)#milestones>).
+This is the implementation of a small portion of the [Project Plan](https://github.com/xergiodf/react-dynamic-form/wiki/Project-Plan-(Task-%231)). The intention of this repository is to act as a Proof of Concept, tackling certain tasks from the [Milestones](https://github.com/xergiodf/react-dynamic-form/wiki/Project-Plan-(Task-%231)#milestones).
 
-[PLEASE CHECK THE WIKI FOR MORE INFORMATION](wiki)
+[PLEASE CHECK THE WIKI FOR MORE INFORMATION](https://github.com/xergiodf/react-dynamic-form/wiki)
 
 ## Requirements
 
